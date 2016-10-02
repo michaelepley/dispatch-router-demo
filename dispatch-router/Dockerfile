@@ -15,6 +15,7 @@ ENV QDROUTER_CONF /etc/qpid-dispatch/qdrouterd.conf
 RUN    dnf -y update \
     && dnf -y install qpid-dispatch-router qpid-dispatch-tools \
                       qpid-dispatch-docs python-websockify \
+                      procps-ng net-tools \
     && dnf -y clean all
 
 USER 1000
