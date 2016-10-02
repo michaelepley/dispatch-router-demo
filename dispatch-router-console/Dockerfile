@@ -18,7 +18,7 @@ RUN    dnf -y update \
     && unzip -q master.zip \
     && mkdir -p /var/lib/tomcat/webapps/dispatch \
     && cp -r qpid-dispatch-master/console/stand-alone/* /var/lib/tomcat/webapps/dispatch \
-    && rm -fr /tmp/qpid-dispatch-master \
+    && rm -fr /tmp/qpid-dispatch-master /tmp/master.zip \
     && chown -R 1000:1000 \
            /usr/share/tomcat \
            /etc/tomcat \
